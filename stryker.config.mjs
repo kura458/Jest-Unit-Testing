@@ -1,11 +1,12 @@
 export default {
   testRunner: "jest",
   testRunnerNodeArgs: ["--experimental-vm-modules"],
-  reporters: ["clear-text", "html"],
+  reporters: ["clear-text", "html", "json"],
   coverageAnalysis: "perTest",
+  tempDirName: "stryker-tmp",
 
-  // Q14: Mutate only the payment module.
-  mutate: ["src/payment.js"],
+  // Q12 & Q14: Mutation testing targets
+  mutate: ["src/scholarship.js", "src/payment.js"],
 
   jest: {
     projectType: "custom",

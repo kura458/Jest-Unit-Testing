@@ -32,16 +32,16 @@ function validateStudent(student) {
     throw new RangeError("Attendance must be between 0 and 100");
   }
 
-  if (typeof credits !== "number") {
+  if (typeof credits !== "number" || !Number.isFinite(credits)) {
     throw new TypeError("Credits must be a number");
   }
 
   if (!Number.isInteger(credits) || credits < 0) {
-    throw new RangeError("Credits must be a nonnegative integer");
+    throw new RangeError("Credits must be a non-negative integer");
   }
 
   if (typeof disciplinaryAction !== "boolean") {
-    throw new TypeError("Disciplinary action must be a Boolean");
+    throw new TypeError("Disciplinary action must be a boolean");
   }
 }
 
