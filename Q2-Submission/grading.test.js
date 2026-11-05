@@ -1,5 +1,5 @@
 
-import { GradeBook } from "../../src/grading.js";
+import { GradeBook } from "./grading.js";
 
 describe("GradeBook Class Tests", () => {
 
