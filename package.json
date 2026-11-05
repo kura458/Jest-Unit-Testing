@@ -4,7 +4,8 @@
   "description": "Individual Jest Unit Testing Laboratory Assignment",
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
-    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage --runInBand"
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage --runInBand",
+    "test:mutation": "stryker run"
   },
   "keywords": [],
   "author": "",
