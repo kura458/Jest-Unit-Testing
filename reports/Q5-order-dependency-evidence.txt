@@ -1,0 +1,30 @@
+
+> jest-unit-testing@1.0.0 test
+> node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand --runTestsByPath tests/unit/Q5-order-demo.test.js
+
+(node:13560) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL tests/unit/Q5-order-demo.test.js
+  √ first test adds a student to the shared repository (8 ms)
+  × second test expects an empty repository (10 ms)
+
+  ● second test expects an empty repository
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 15 |[39m test([32m"second test expects an empty repository"[39m[33m,[39m () [33m=>[39m {
+     [90m 16 |[39m   [90m// This fails because the first test left its data behind.[39m
+    [31m[1m>[22m[39m[90m 17 |[39m   expect(sharedRepository[33m.[39mcount())[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 18 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (tests/unit/Q5-order-demo.test.js:17:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.72 s, estimated 1 s
+Ran all test suites within paths "tests/unit/Q5-order-demo.test.js".
